@@ -2,22 +2,23 @@
 Justin Chen
 Problem 2: Basic Operations
 """
+import math
 
-# 1. Multiply two vairables and format the answer to two decimals
+# 1. Plug two vairables into the compound interest formula and format the answer to two decimals
 deposite_amounts = 1000
 interest_rate = 0.05
-total_wealth = deposite_amounts * (1 + interest_rate * 10)
+total_wealth = deposite_amounts * pow((1 + (interest_rate)), 10)
 print("Bill's total wealth is ${:.2f}".format(total_wealth))
 
-# 2. Double the deposite amount, move variables in the simple interest formula to get the time needed
+# 2. Double the deposite amount, move variables to solve the time t in compound interest formula
 total_wealth = deposite_amounts * 2
-time_needed = (total_wealth / deposite_amounts - 1) / interest_rate
+time_needed = math.log(total_wealth, (1 + interest_rate))
 print("It takes {:.2f} years to double Bill's money".format(time_needed))
 
 # 3. Modify the values of the variables, compare the total wealth and the desired amount
 deposite_amounts = 5000
 interest_rate = 0.2
-total_wealth = deposite_amounts * (1 + interest_rate * 6)
+total_wealth = deposite_amounts * pow((1 + (interest_rate)), 6)
 print(total_wealth == (deposite_amounts * 2))
 
 # 4. Created a list with names to be string value and money to be integer value
