@@ -4,11 +4,11 @@ Problem 2: Basic Operations
 """
 import math
 
-# 1. Plug two vairables into the compound interest formula and format the answer to two decimals
+# 1. Plug two vairables into the compound interest formula and round the answer to integer
 deposit_amounts = int(input('What is the deposite amounts?'))
 interest_rate = float(input('What is the interest rate?')) / 100
 total_wealth = deposit_amounts * pow((1 + (interest_rate)), 10)
-print(f"Bill's total wealth is ${total_wealth:.2f}")
+print(f"Bill's total wealth is ${round(total_wealth)}")
 
 # 2. Solving time t in the compound interest formula
 time_needed = math.log(2, (1 + interest_rate))
